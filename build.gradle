@@ -1,0 +1,21 @@
+allprojects {apply plugin: 'idea'}
+
+subprojects {
+  apply plugin: 'groovy'
+
+  repositories {mavenCentral()}
+
+  dependencies {
+    compile 'org.spockframework:spock-core:0.7-groovy-2.0'
+    compile 'org.gperfutils:gbench:0.4.2-groovy-2.1'
+    compile 'org.jfairy:jfairy:0.2.5'
+  }
+}
+
+project(':2.2') {
+  dependencies {compile 'org.codehaus.groovy:groovy-all:2.2.2'}
+}
+
+project(':2.3') {
+  dependencies {compile 'org.codehaus.groovy:groovy-all:2.3.0-rc-4'}
+}
